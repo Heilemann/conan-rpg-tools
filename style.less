@@ -1,23 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 body {
-  font-family: Helvetica, sans-serif;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  font-size: 1.3em;
+  box-sizing: border-box;
 }
 
 .logo {
   text-align: center;
 
   img {
-    width: 80%;
     max-width: 600px;
   }
-}
-
-section {
-  margin: 20px 0
 }
 
 .label {
@@ -27,4 +20,12 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   color: rgb(171,171,171)
+}
+
+.value {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

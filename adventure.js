@@ -1017,24 +1017,61 @@ function getLocation () {
 // console.log("---");
 
 function letmetellyouofthedaysofhighadventure () {
+  document.querySelector('#title .value').addEventListener('click', () => {
+    document.querySelector('#title .value').innerText = getTitle()
+  })
   document.querySelector('#title .value').innerText = getTitle()
+
+  document.querySelector('#setting .value').addEventListener('click', () => {
+    document.querySelector('#setting .value').innerText = getAdventure()
+  })
   document.querySelector('#setting .value').innerText = getAdventure()
+
+  document.querySelector('#npc .value').addEventListener('click', () => {
+    document.querySelector('#npc .value').innerText = getNPC()
+  })
   document.querySelector('#npc .value').innerText = getNPC()
 
+  document.querySelector('#hooks .value').addEventListener('click', () => {
+    document.querySelector('#hooks .value').innerText = getHookAndDraw()
+  })
   document.querySelector('#hooks .value').innerText = getHookAndDraw()
+
+  document.querySelector('#plot .value').addEventListener('click', () => {
+    document.querySelector('#plot .value').innerText = getPlotConcept()
+  })
   document.querySelector('#plot .value').innerText = getPlotConcept()
 
+  document.querySelector('#antagonist .value').addEventListener('click', () => {
+    document.querySelector('#antagonist .value').innerText = getAntagonist()
+  })
   document.querySelector('#antagonist .value').innerText = getAntagonist()
+
+  document.querySelector('#plotfulfillment .value').addEventListener('click', () => {
+    document.querySelector('#plotfulfillment .value').innerText = getPlotFulfillmentAndLocation()
+  })
   document.querySelector('#plotfulfillment .value').innerText = getPlotFulfillmentAndLocation()
+
+  document.querySelector('#twist .value').addEventListener('click', () => {
+    document.querySelector('#twist .value').innerText = getTwist()
+  })
   document.querySelector('#twist .value').innerText = getTwist()
+
+  document.querySelector('#goal .value').addEventListener('click', () => {
+    document.querySelector('#goal .value').innerText = getGoal()
+  })
   document.querySelector('#goal .value').innerText = getGoal()
 
+  document.querySelector('#location1 .value').addEventListener('click', () => {
+    document.querySelector('#location1 .value').innerText = getLocation()
+  })
   document.querySelector('#location1 .value').innerText = getLocation()
-  document.querySelector('#location2 .value').innerText = getLocation()
-}
 
-document.querySelector('button').addEventListener('click', () => {
-  letmetellyouofthedaysofhighadventure()
-})
+  document.querySelector('#location2 .value').addEventListener('click', () => {
+    document.querySelector('#location2 .value').innerText = getLocation()
+  })
+  document.querySelector('#location2 .value').innerText = getLocation()
+
+}
 
 letmetellyouofthedaysofhighadventure()
