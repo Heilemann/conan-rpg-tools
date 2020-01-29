@@ -399,11 +399,6 @@ function getTitle () {
   return rollOn(titleStructures);
 }
 
-// for (var i = 0; i < 3; i++) {
-//   console.log('title:', getTitle())
-// }
-// console.log("---");
-
 
 function getCreature () {
   let creature = [
@@ -424,25 +419,25 @@ function getCreature () {
 
 function getAdventure () {
   let descriptors = [
-    "Chaotic",
-    "Frozen",
-    "Ominous",
-    "Claustrophobic",
-    "Eerie",
-    "Fathomless",
-    "Sprawling",
-    "Malodorous",
-    "Vibrant",
-    "Barren",
-    "Oppressive",
-    "Obscure",
-    "Brackish",
-    "Foggy or misty",
-    "Searing",
-    "Tempestuous",
-    "Empty",
-    "Crumbling",
-    "Weird"
+    "A chaotic",
+    "A frozen",
+    "An ominous",
+    "A claustrophobic",
+    "An eerie",
+    "A fathomless",
+    "A sprawling",
+    "A malodorous",
+    "A vibrant",
+    "A barren",
+    "An oppressive",
+    "An obscure",
+    "A brackish",
+    "A foggy or misty",
+    "A searing",
+    "A tempestuous",
+    "An empty",
+    "A crumbling",
+    "A weird"
   ]
 
   let settingDescriptors = descriptors.concat([`${rollOn(descriptors)} and ${rollOn(descriptors).toLowerCase()}`])
@@ -473,8 +468,6 @@ function getAdventure () {
   return rollOn(settings)
 }
 
-// console.log('Opening location:', getAdventure())
-// console.log("---");
 
 let locationObjetive = [
 
@@ -1023,19 +1016,25 @@ function getLocation () {
 // console.log('location and atmosphere:', getLocation());
 // console.log("---");
 
+function letmetellyouofthedaysofhighadventure () {
+  document.querySelector('#title .value').innerText = getTitle()
+  document.querySelector('#setting .value').innerText = getAdventure()
+  document.querySelector('#npc .value').innerText = getNPC()
 
-console.log('getTitle() ----- ', getTitle())
-console.log('getAdventure() ----- ', getAdventure())
-console.log('getNPC() ----- ', getNPC())
-console.log('----');
-console.log('getHookAndDraw() ----- ', getHookAndDraw())
-console.log('getPlotConcept() ----- ', getPlotConcept())
-console.log('----');
-console.log('getAntagonist() ----- ', getAntagonist())
-console.log('getPlotFulfillmentAndLocation() ----- ', getPlotFulfillmentAndLocation())
-console.log('----');
-console.log('getTwist() ----- ', getTwist())
-console.log('getTwist() ----- ', getTwist())
-console.log('getGoal() ----- ', getGoal())
-console.log('getLocation() ----- ', getLocation())
-console.log('getLocation() ----- ', getLocation())
+  document.querySelector('#hooks .value').innerText = getHookAndDraw()
+  document.querySelector('#plot .value').innerText = getPlotConcept()
+
+  document.querySelector('#antagonist .value').innerText = getAntagonist()
+  document.querySelector('#plotfulfillment .value').innerText = getPlotFulfillmentAndLocation()
+  document.querySelector('#twist .value').innerText = getTwist()
+  document.querySelector('#goal .value').innerText = getGoal()
+
+  document.querySelector('#location1 .value').innerText = getLocation()
+  document.querySelector('#location2 .value').innerText = getLocation()
+}
+
+document.querySelector('button').addEventListener('click', () => {
+  letmetellyouofthedaysofhighadventure()
+})
+
+letmetellyouofthedaysofhighadventure()
