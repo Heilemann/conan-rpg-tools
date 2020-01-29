@@ -1,2 +1,3 @@
-# conan-rpg-tools
-Tools for the Conan RPG gamemaster.
+# Conan RPG Adventure Generator
+
+Tools for the Conan RPG gamemaster; tables from the Gamemaster's Toolkit.
